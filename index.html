@@ -72,8 +72,7 @@
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center py-4">
                 <div class="flex items-center">
-                    <i class="fas fa-tshirt text-3xl text-primary mr-3"></i>
-                    <h1 class="text-2xl font-bold text-gray-800">StyleHub</h1>
+                    <img src="Logo.png" alt="" style="height:70px;">
                 </div>
                 
                 <div class="hidden md:flex space-x-8">
@@ -188,7 +187,7 @@
                 <div class="aspect-w-16 aspect-h-9">
                     <iframe 
                         class="w-full h-96 rounded-xl shadow-lg"
-                        src="https://www.youtube.com/embed/6pxRHBw-k8M" 
+                        src="https://www.youtube.com/embed/6pxRHBw-k8" 
                         title="Fashion Brand Story" 
                         frameborder="0" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -265,23 +264,82 @@
             </div>
         </div>
     </section>
-
+<!-- Contact Us Section -->
+<section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Contact Us</h2>
+        
+        
+            <!-- Contact Form -->
+            <div class="bg-white rounded-xl shadow-lg p-8">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6">Send Message</h3>
+                
+                <form action="#" method="POST" class="space-y-6">
+                    <!-- Name -->
+                    <div>
+                        <label for="name" class="block text-gray-700 mb-2">Full Name</label>
+                        <input 
+                            type="text" 
+                            id="name" 
+                            name="name"
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                            placeholder="Your name"
+                        >
+                    </div>
+                    
+                    <!-- Email -->
+                    <div>
+                        <label for="email" class="block text-gray-700 mb-2">Email Address</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email"
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                            placeholder="you@example.com"
+                        >
+                    </div>
+                    
+                    <!-- Message -->
+                    <div>
+                        <label for="message" class="block text-gray-700 mb-2">Message</label>
+                        <textarea 
+                            id="message" 
+                            name="message"
+                            rows="4"
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent resize-none"
+                            placeholder="Your message..."
+                        ></textarea>
+                    </div>
+                    
+                    <!-- Submit Button -->
+                    <button 
+                        type="submit"
+                        class="w-full bg-primary text-white py-3 px-6 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+                    >
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+        
+       
+    </div>
+</section>
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-12">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="mb-8 md:mb-0">
                     <div class="flex items-center mb-4">
-                        <i class="fas fa-tshirt text-3xl text-primary mr-3"></i>
-                        <h2 class="text-2xl font-bold">StyleHub</h2>
+                     <img src="Logo.png" alt="" style="height:70px;">
+
                     </div>
                     <p class="text-gray-400">Fashion for everyone, every day.</p>
                 </div>
                 
                 <div class="text-center md:text-right">
-                    <p class="text-gray-400 mb-4">Visit our sales dashboard for analytics</p>
-                    <a href="dashboard.html" class="bg-primary text-white px-6 py-3 rounded-lg hover:bg-purple-700 font-medium">
-                        <i class="fas fa-chart-line mr-2"></i> Location 
+                   
+                     Location here 
                     </a>
                 </div>
             </div>
