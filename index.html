@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleHub Clothing Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#7C3AED',
+                        secondary: '#F59E0B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .theme-light {
+            --bg-color: #ffffff;
+            --text-color: #1f2937;
+            --card-bg: #f9fafb;
+        }
+        
+        .theme-dark {
+            --bg-color: #1f2937;
+            --text-color: #f9fafb;
+            --card-bg: #374151;
+        }
+        
+        .theme-colorblind {
+            --bg-color: #ffffff;
+            --text-color: #000000;
+            --card-bg: #f0f0f0;
+            --primary: #0066cc;
+            --secondary: #ff9900;
+        }
+        
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: all 0.3s ease;
+        }
+        
+        .card {
+            background-color: var(--card-bg);
+        }
+        
+        .font-size-small {
+            font-size: 14px;
+        }
+        
+        .font-size-medium {
+            font-size: 16px;
+        }
+        
+        .font-size-large {
+            font-size: 18px;
+        }
+        
+        .font-size-xlarge {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body class="theme-light font-size-medium">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <i class="fas fa-tshirt text-3xl text-primary mr-3"></i>
+                    <h1 class="text-2xl font-bold text-gray-800">StyleHub</h1>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#" class="text-gray-700 hover:text-primary font-medium">Home</a>
+                    <a href="#" class="text-gray-700 hover:text-primary font-medium">Men</a>
+                    <a href="#" class="text-gray-700 hover:text-primary font-medium">Women</a>
+                    <a href="#" class="text-gray-700 hover:text-primary font-medium">Kids</a>
+                    <a href="#" class="text-gray-700 hover:text-primary font-medium">Sale</a>
+                    <a href="dashboard.html" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-purple-700">Dashboard</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <button id="themeToggle" class="p-2 rounded-full bg-gray-100 hover:bg-gray-200">
+                        <i class="fas fa-palette text-primary"></i>
+                    </button>
+                    <button id="fontSizeToggle" class="p-2 rounded-full bg-gray-100 hover:bg-gray-200">
+                        <i class="fas fa-text-height text-primary"></i>
+                    </button>
+                    <i class="fas fa-shopping-cart text-2xl text-gray-700 hover:text-primary cursor-pointer"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-purple-100 to-pink-100 py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Summer Sale Up to 50% Off</h2>
+            <p class="text-xl text-gray-600 mb-8">Discover the latest fashion trends for everyone</p>
+            <a href="#" class="bg-primary text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-purple-700">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Featured Products</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- Product 1 -->
+                <div class="card rounded-xl shadow-lg overflow-hidden">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1505022610485-0249ba5b3675?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                             alt="Men's Casual Shirt" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full">Sale</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Men's Casual Shirt</h3>
+                        <div class="flex items-center mb-4">
+                            <span class="text-2xl font-bold text-primary">$29.99</span>
+                            <span class="text-gray-500 line-through ml-3">$49.99</span>
+                        </div>
+                        <button class="w-full bg-gray-800 text-white py-2 rounded-lg hover:bg-gray-900">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="card rounded-xl shadow-lg overflow-hidden">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                             alt="Women's Summer Dress" class="w-full h-64 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Women's Summer Dress</h3>
+                        <div class="flex items-center mb-4">
+                            <span class="text-2xl font-bold text-primary">$45.99</span>
+                        </div>
+                        <button class="w-full bg-gray-800 text-white py-2 rounded-lg hover:bg-gray-900">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="card rounded-xl shadow-lg overflow-hidden">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                             alt="Kids Jacket" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full">Sale</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Kids Winter Jacket</h3>
+                        <div class="flex items-center mb-4">
+                            <span class="text-2xl font-bold text-primary">$39.99</span>
+                            <span class="text-gray-500 line-through ml-3">$59.99</span>
+                        </div>
+                        <button class="w-full bg-gray-800 text-white py-2 rounded-lg hover:bg-gray-900">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="card rounded-xl shadow-lg overflow-hidden">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                             alt="Jeans" class="w-full h-64 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Classic Jeans</h3>
+                        <div class="flex items-center mb-4">
+                            <span class="text-2xl font-bold text-primary">$34.99</span>
+                        </div>
+                        <button class="w-full bg-gray-800 text-white py-2 rounded-lg hover:bg-gray-900">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Our Story</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="aspect-w-16 aspect-h-9">
+                    <iframe 
+                        class="w-full h-96 rounded-xl shadow-lg"
+                        src="https://www.youtube.com/embed/6pxRHBw-k8M" 
+                        title="Fashion Brand Story" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <p class="text-center text-gray-600 mt-8 text-lg">
+                    Discover our journey in creating sustainable and fashionable clothing since 2010.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personalization Controls -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Customize Your Experience</h2>
+            
+            <div class="max-w-2xl mx-auto card p-8 rounded-xl shadow-lg">
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-4">Select Theme</h3>
+                    <div class="flex flex-wrap gap-4">
+                        <button class="theme-btn px-6 py-3 rounded-lg bg-white border border-gray-300 hover:bg-gray-50" data-theme="light">
+                            <i class="fas fa-sun mr-2"></i> Light Mode
+                        </button>
+                        <button class="theme-btn px-6 py-3 rounded-lg bg-gray-800 text-white hover:bg-gray-900" data-theme="dark">
+                            <i class="fas fa-moon mr-2"></i> Dark Mode
+                        </button>
+                        <button class="theme-btn px-6 py-3 rounded-lg bg-blue-100 text-blue-800 hover:bg-blue-200" data-theme="colorblind">
+                            <i class="fas fa-eye mr-2"></i> Colorblind Friendly
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-4">Text Size</h3>
+                    <div class="flex flex-wrap gap-4">
+                        <button class="font-size-btn px-6 py-3 rounded-lg bg-gray-100 hover:bg-gray-200" data-size="small">
+                            Small
+                        </button>
+                        <button class="font-size-btn px-6 py-3 rounded-lg bg-primary text-white hover:bg-purple-700" data-size="medium">
+                            Medium
+                        </button>
+                        <button class="font-size-btn px-6 py-3 rounded-lg bg-gray-100 hover:bg-gray-200" data-size="large">
+                            Large
+                        </button>
+                        <button class="font-size-btn px-6 py-3 rounded-lg bg-gray-100 hover:bg-gray-200" data-size="xlarge">
+                            Extra Large
+                        </button>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Quick Stats</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div class="bg-primary text-white p-4 rounded-lg text-center">
+                            <p class="text-2xl font-bold">24</p>
+                            <p>New Arrivals</p>
+                        </div>
+                        <div class="bg-secondary text-white p-4 rounded-lg text-center">
+                            <p class="text-2xl font-bold">42</p>
+                            <p>On Sale</p>
+                        </div>
+                        <div class="bg-green-500 text-white p-4 rounded-lg text-center">
+                            <p class="text-2xl font-bold">3</p>
+                            <p>Days Left</p>
+                        </div>
+                        <div class="bg-red-500 text-white p-4 rounded-lg text-center">
+                            <p class="text-2xl font-bold">15%</p>
+                            <p>Extra Discount</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-8 md:mb-0">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-tshirt text-3xl text-primary mr-3"></i>
+                        <h2 class="text-2xl font-bold">StyleHub</h2>
+                    </div>
+                    <p class="text-gray-400">Fashion for everyone, every day.</p>
+                </div>
+                
+                <div class="text-center md:text-right">
+                    <p class="text-gray-400 mb-4">Visit our sales dashboard for analytics</p>
+                    <a href="dashboard.html" class="bg-primary text-white px-6 py-3 rounded-lg hover:bg-purple-700 font-medium">
+                        <i class="fas fa-chart-line mr-2"></i> Go to Dashboard
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 StyleHub Clothing Store. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Personalization -->
+    <script>
+        // Theme switching functionality
+        const themeButtons = document.querySelectorAll('.theme-btn');
+        const fontSizeButtons = document.querySelectorAll('.font-size-btn');
+        
+        themeButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const theme = this.getAttribute('data-theme');
+                document.body.className = document.body.className.replace(/theme-\w+/g, '');
+                document.body.classList.add(`theme-${theme}`);
+                
+                // Update active button
+                themeButtons.forEach(btn => btn.classList.remove('ring-2', 'ring-primary'));
+                this.classList.add('ring-2', 'ring-primary');
+            });
+        });
+        
+        // Font size switching functionality
+        fontSizeButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const size = this.getAttribute('data-size');
+                document.body.className = document.body.className.replace(/font-size-\w+/g, '');
+                document.body.classList.add(`font-size-${size}`);
+                
+                // Update active button
+                fontSizeButtons.forEach(btn => {
+                    btn.classList.remove('bg-primary', 'text-white');
+                    btn.classList.add('bg-gray-100', 'text-gray-800');
+                });
+                this.classList.remove('bg-gray-100', 'text-gray-800');
+                this.classList.add('bg-primary', 'text-white');
+            });
+        });
+        
+        // Quick theme toggle in nav
+        document.getElementById('themeToggle').addEventListener('click', function() {
+            const currentTheme = document.body.className.match(/theme-(\w+)/);
+            let nextTheme = 'dark';
+            
+            if (currentTheme && currentTheme[1] === 'dark') {
+                nextTheme = 'colorblind';
+            } else if (currentTheme && currentTheme[1] === 'colorblind') {
+                nextTheme = 'light';
+            }
+            
+            document.body.className = document.body.className.replace(/theme-\w+/g, '');
+            document.body.classList.add(`theme-${nextTheme}`);
+        });
+        
+        // Font size toggle in nav
+        const sizes = ['small', 'medium', 'large', 'xlarge'];
+        let currentSizeIndex = 1;
+        
+        document.getElementById('fontSizeToggle').addEventListener('click', function() {
+            currentSizeIndex = (currentSizeIndex + 1) % sizes.length;
+            const nextSize = sizes[currentSizeIndex];
+            
+            document.body.className = document.body.className.replace(/font-size-\w+/g, '');
+            document.body.classList.add(`font-size-${nextSize}`);
+        });
+    </script>
+</body>
+</html>
